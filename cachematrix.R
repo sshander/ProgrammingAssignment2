@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions will calculate the inverse of a given matrix, X so that when multiplied by X, 
+## the identity matrix is the output.
 
-## Write a short comment describing this function
+## This function specifically makes a list of outputs related to the input X.  First it sets initial values
+## for its list outputs.  
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -17,7 +18,9 @@ makeCacheMatrix <- function(x = matrix()) {
          getinverse = getinverse)
 }
 
-## Write a short comment describing this function
+## This function pulls the output from the previous function under x[getinverse].  If the value is there,
+## it will print the message "getting cached data", then the inverese.  If the value is not previouslyg saved,
+##it will need to calculate the inverse using the solve() function, then storing it, and finally retrieiving it.
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
